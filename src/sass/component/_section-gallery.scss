@@ -1,0 +1,30 @@
+.section-gallery {
+  position: relative;
+  &-btn {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    fill: none;
+    z-index: 1;
+    cursor: pointer;
+    &:first-child {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &:nth-child(2) {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) scaleX(-1);
+    }
+  }
+  &__content {
+    display: flex;
+    gap: 3rem;
+    width: fit-content;
+    transition: all 0.3s ease;
+    &-item {
+      height: 14rem;
+    }
+  }
+}

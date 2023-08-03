@@ -28,5 +28,8 @@
             <circle cx="18.5" cy="18.5" r="18.5" fill="white"/>
             <path d="M12 25.4583L24.4583 13M24.4583 13V24.96M24.4583 13H12.4983" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+        <symbol id="arrow" viewBox="0 0 43 43" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 7L11 22L32 37" stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
     </defs>
 </svg>
