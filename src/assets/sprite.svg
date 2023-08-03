@@ -1,0 +1,32 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="star" viewBox="0 -8 70 72" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path d="M58 0L58 0L58 58L0 58L0 0L58 0Z" id="path_1" />
+                <path d="M29 0L37.9615 19.0924L58 22.154L43.5 37.0154L46.923 58L29 48.0924L11.077 58L14.5 37.0154L0 22.154L20.0385 19.0924L29 0Z" id="path_2" />
+                <clipPath id="clip_1">
+                <use xlink:href="#path_1" />
+                </clipPath>
+                <clipPath id="clip_2">
+                <use xlink:href="#path_2" />
+                </clipPath>
+            </defs>
+            <g id="Frame 12" clip-path="url(#clip_1)">
+                <path d="M58 0L58 0L58 58L0 58L0 0L58 0Z" id="Frame-12" fill="none" stroke="none" />
+                <g id="Star-5">
+                <use stroke="none" fill="#D3D3D3" fill-opacity="0" xlink:href="#path_2" fill-rule="evenodd" />
+                <g clip-path="url(#clip_2)">
+                    <use xlink:href="#path_2" stroke-width="4" />
+                </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="quote" viewBox="0 0 60 55.77246" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.4783 0L0 0L0 31.8843C0 52.1738 13.0435 57.9712 23.4783 55.0723C15.6521 46.377 15.6521 40.5796 15.6521 31.8843L23.4783 31.8843L23.4783 0L23.4783 0ZM60 0L36.5217 0L36.5217 31.8843C36.5217 52.1738 49.5652 57.9712 60 55.0723C52.1738 46.377 52.1738 40.5796 52.1738 31.8843L60 31.8843L60 0L60 0Z" id="Shape" fill="#333333" fill-rule="evenodd" stroke="none" />
+        </symbol>
+        <symbol id="circle-arrow" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18.5" cy="18.5" r="18.5" fill="white"/>
+            <path d="M12 25.4583L24.4583 13M24.4583 13V24.96M24.4583 13H12.4983" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+    </defs>
+</svg>

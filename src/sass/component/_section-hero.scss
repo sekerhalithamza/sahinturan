@@ -1,0 +1,20 @@
+.section-hero {
+  background-color: map-get($colors, dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 6rem);
+
+  &__content {
+    &--title {
+      font-size: map-get($font-sizes, heading);
+      font-weight: map-get($font-weights, extra-bold);
+    }
+
+    &--text {
+      color: map-get($colors, text-secondary);
+      font-size: map-get($font-sizes, base);
+      font-size: map-get($font-weights, medium);
+    }
+  }
+}

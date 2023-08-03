@@ -1,0 +1,29 @@
+.section-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding-block: 5rem;
+
+  &--title {
+    font-size: map-get($font-sizes, xxxl);
+    font-weight: map-get($font-weights, semi-bold);
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 5rem;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    iframe {
+      width: 50rem;
+      height: 25rem;
+    }
+  }
+}

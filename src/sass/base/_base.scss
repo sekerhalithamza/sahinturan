@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html {
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+  font-size: 62.5%; // 1rem = 10px
+  font-family: "Merriweather", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  font-size: map-get($font-sizes, base);
+  background-color: map-get($colors, dark);
+  color: map-get($colors, light);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: map-get($colors, light);
+}
