@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 5rem;
+  padding: 10rem 4rem;
 
   &--title {
     font-size: map-get($font-sizes, xxxl);
@@ -20,18 +21,35 @@
     &-container {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
+      width: 100%;
+
+      &:nth-child(odd) {
+        .section-events__wrapper-container__content {
+          width: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          flex-direction: column;
+          p {
+            text-align: right;
+            &:nth-child(2) {
+              width: fit-content;
+            }
+          }
+        }
+      }
 
       &--img {
-        height: 20rem;
-        width: 20rem;
-        object-fit: cover;
+        height: 40rem;
+        width: 45rem;
+        object-fit: contain;
       }
 
       &--text {
         font-size: map-get($font-sizes, m);
-        width: 50%;
+        width: 55%;
       }
 
       &:nth-child(even) {
