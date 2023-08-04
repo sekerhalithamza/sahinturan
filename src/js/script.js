@@ -3,11 +3,16 @@
 const gallery = document.getElementsByClassName("section-gallery__content")[0];
 const leftBtn = document.getElementsByClassName("section-gallery-btn")[0];
 const rightBtn = document.getElementsByClassName("section-gallery-btn")[1];
-
-console.log(gallery);
+const projectBtns = document.getElementsByClassName("section-projects__option");
+const projectBooks = document.getElementsByClassName("section-projects-book");
+const projectDocumentaries = document.getElementsByClassName(
+  "section-projects-documentary"
+);
 
 const rect = gallery.getBoundingClientRect();
-const galleryImages = gallery.getElementsByClassName("section-gallery__content-item");
+const galleryImages = gallery.getElementsByClassName(
+  "section-gallery__content-item"
+);
 
 let moveX = ((rect.width - window.innerWidth) / 2) * -1;
 let scrollAmount = 0;
@@ -26,4 +31,31 @@ rightBtn.addEventListener("click", () => {
   scrollAmount -= galleryImages[index].getBoundingClientRect().width;
   gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
   index++;
+});
+
+projectBtns[0].addEventListener("click", () => {
+  for (const element of projectBooks) {
+    element.classList.remove("closed");
+  }
+  for (const element of projectDocumentaries) {
+    element.classList.remove("closed");
+  }
+});
+
+projectBtns[1].addEventListener("click", () => {
+  for (const element of projectBooks) {
+    element.classList.add("closed");
+  }
+  for (const element of projectDocumentaries) {
+    element.classList.remove("closed");
+  }
+});
+
+projectBtns[2].addEventListener("click", () => {
+  for (const element of projectBooks) {
+    element.classList.remove("closed");
+  }
+  for (const element of projectDocumentaries) {
+    element.classList.add("closed");
+  }
 });

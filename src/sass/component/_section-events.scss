@@ -14,8 +14,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 5rem;
-    padding-inline: 10rem;
+    row-gap: 3rem;
+    padding-inline: 6rem;
 
     &-container {
       display: flex;
@@ -24,8 +24,9 @@
       justify-content: space-between;
 
       &--img {
-        height: 100%;
-        width: auto;
+        height: 20rem;
+        width: 20rem;
+        object-fit: cover;
       }
 
       &--text {

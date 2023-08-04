@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 6rem;
+  align-items: center;
+  padding-inline: 2rem;
+
+  &--logo {
+    font-size: map-get($font-sizes, xxxl);
+  }
+
+  &--copyright {
+    font-size: map-get($font-sizes, s);
+    font-weight: map-get($font-weights, tiny);
+    color: map-get($colors, text-secondary);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-item,
+    &-item a {
+      height: 3.2rem;
+      width: 3.2rem;
+
+      a svg {
+        height: 3.2rem;
+        width: 3.2rem;
+      }
+    }
+  }
+}

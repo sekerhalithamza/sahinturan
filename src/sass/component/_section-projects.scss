@@ -1,0 +1,64 @@
+.section-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 5rem;
+    width: 100%;
+    padding-inline: 5rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      &-end {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &__container {
+          h3 {
+            font-size: map-get($font-sizes, m);
+          }
+
+          p {
+            color: map-get($colors, text-secondary);
+          }
+        }
+
+        svg {
+          width: 3.6rem;
+          height: 3.6rem;
+        }
+      }
+    }
+  }
+
+  &-book,
+  &-documentary {
+    display: grid;
+    column-gap: 5%;
+  }
+
+  &-book {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &-documentary {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
