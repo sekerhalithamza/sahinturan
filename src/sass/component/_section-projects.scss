@@ -16,6 +16,9 @@
 
   &-book {
     height: 100%;
+    &.closed {
+      display: none;
+    }
     .section-projects__content-item {
       height: 100%;
     }
@@ -78,5 +81,8 @@
 
   &-documentary {
     grid-template-columns: repeat(4, 1fr);
+    &.closed {
+      display: none;
+    }
   }
 }
