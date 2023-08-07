@@ -14,25 +14,31 @@ setTimeout(function () {
   let moveX = ((rect.width - window.innerWidth) / 2) * -1;
   let scrollAmount = 0;
   let index = (galleryImages.length - 1) / 2;
-  gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
 
-  const stopAmount = 1;
+  const stopAmount = 0;
 
   leftBtn.addEventListener("click", () => {
     if (index === stopAmount) return;
     const elem = galleryImages[index];
     scrollAmount += elem.getBoundingClientRect().width;
-    gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
+    moveImages(moveX + scrollAmount - 500);
     index--;
   });
 
   rightBtn.addEventListener("click", () => {
     if (index === galleryImages.length - (1 + stopAmount)) return;
     scrollAmount -= galleryImages[index].getBoundingClientRect().width;
-    gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
+    const smth = gallery.getBoundingClientRect().width /2;
+    moveImages(moveX + scrollAmount - 500);
     index++;
   });
-}, 500);
+  function moveImages(amount) {
+    let img;
+    for (img of galleryImages) {
+      img.style.transform = `translateX( ${amount}px )`;
+    }
+  }
+}, 1000);
 
 projectBtns[0].addEventListener("click", () => {
   for (const element of projectBooks) {

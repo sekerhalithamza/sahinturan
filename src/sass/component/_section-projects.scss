@@ -7,7 +7,8 @@
 
   &__option {
     padding: 1rem 2rem;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
+    border: none;
     cursor: pointer;
     &-container {
       margin-bottom: 3rem;
@@ -84,5 +85,21 @@
     &.closed {
       display: none;
     }
+  }
+  @media screen and (max-width: 800px) {
+    &-book {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-documentary {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+      row-gap: 2.5rem;
+      .section-projects__content-item:nth-child(4) {
+        grid-column: 2 ;
+      }
+    }
+  }
+  @media screen  {
+    
   }
 }

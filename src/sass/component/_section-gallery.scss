@@ -1,5 +1,10 @@
+:root {
+  --gallery-bottom-margin: 20rem;
+}
+
 .section-gallery {
   position: relative;
+  margin-bottom: var(--gallery-bottom-margin);
   &--title {
     text-align: center;
     margin-bottom: 2rem;
@@ -14,14 +19,20 @@
     background-color: #000;
     border-radius: 50%;
     padding: 1rem;
-    &:first-child {
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+    transition: all 0.2s ease;
+    top: calc(var(--gallery-bottom-margin) * 0.5);
+    &:nth-child(2):hover {
+      transform: translateY(-50%) scale(1.1);
+    }
+    &:nth-child(3):hover {
+      transform: translateY(-50%) scaleX(-1) scale(1.1);
     }
     &:nth-child(2) {
-      top: 50%;
-      right: 0;
+      left: 1rem;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      right: 1rem;
       transform: translateY(-50%) scaleX(-1);
     }
   }
@@ -30,6 +41,10 @@
     gap: 3rem;
     width: fit-content;
     transition: all 0.3s ease;
+    width: 80%;
+    overflow: hidden;
+    left: 10%;
+    position: absolute;
     &-item {
       height: 14rem;
     }

@@ -7,7 +7,15 @@
   background-color: map-get($colors, dark);
 
   &--btn {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    cursor: pointer;
     display: none;
+    &--svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__nav-list {
@@ -20,6 +28,15 @@
       text-decoration: none;
       color: map-get($colors, light);
       font-size: map-get($font-sizes, m);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__nav-list {
+      gap: 3rem;
+      a {
+        font-size: 1.4rem;
+      }
     }
   }
 }
