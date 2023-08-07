@@ -1,5 +1,9 @@
 .section-gallery {
   position: relative;
+  &--title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
   &-btn {
     width: 4rem;
     height: 4rem;
