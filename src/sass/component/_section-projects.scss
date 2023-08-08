@@ -4,12 +4,18 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 6rem;
+  gap: 2rem;
+
+  &--title {
+    font-size: map-get($font-sizes, xxxl);
+  }
 
   &__option {
     padding: 1rem 2rem;
     border-radius: 1rem;
     border: none;
     cursor: pointer;
+    font-size: map-get($font-sizes, base);
     &-container {
       margin-bottom: 3rem;
     }
@@ -95,11 +101,10 @@
       column-gap: 2rem;
       row-gap: 2.5rem;
       .section-projects__content-item:nth-child(4) {
-        grid-column: 2 ;
+        grid-column: 2;
       }
     }
   }
-  @media screen  {
-    
+  @media screen {
   }
 }
