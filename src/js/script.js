@@ -9,43 +9,46 @@ const projectDocumentaries = document.getElementsByClassName("section-projects-d
 const headerBtn = document.getElementById("headerBtn");
 const headerNav = document.getElementById("headerNav");
 
-headerBtn.addEventListener("mousedown", () => {
-  headerBtn.classList.toggle("active");
-  headerNav.classList.toggle("active")
-});
-
-setTimeout(function () {
+addEventListener("DOMContentLoaded", function () {
   const rect = gallery.getBoundingClientRect();
   const galleryImages = gallery.getElementsByClassName("section-gallery__content-item");
+  const galleryImagesArray = [...galleryImages];
+  const galleryImageRects = galleryImagesArray.map((e) => {
+    return e.getBoundingClientRect();
+  });
 
   let moveX = ((rect.width - window.innerWidth) / 2) * -1;
-  let scrollAmount = 0;
+  function calcScroll() {
+    return (-76 * 10) / 2;
+  }
+
+  let scrollAmount = calcScroll();
+  console.log(scrollAmount);
   let index = (galleryImages.length - 1) / 2;
 
   const stopAmount = 0;
 
   leftBtn.addEventListener("click", () => {
     if (index === stopAmount) return;
-    const elem = galleryImages[index];
-    scrollAmount += elem.getBoundingClientRect().width;
-    moveImages(moveX + scrollAmount - 500);
+    const rect = galleryImageRects[index];
+    scrollAmount += rect.width;
+    gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
     index--;
   });
 
   rightBtn.addEventListener("click", () => {
     if (index === galleryImages.length - (1 + stopAmount)) return;
-    scrollAmount -= galleryImages[index].getBoundingClientRect().width;
-    const smth = gallery.getBoundingClientRect().width / 2;
-    moveImages(moveX + scrollAmount - 500);
+    const rect = galleryImageRects[index];
+    scrollAmount += rect.width;
+    gallery.style.transform = `translateX( ${100}px )`;
     index++;
   });
-  function moveImages(amount) {
-    let img;
-    for (img of galleryImages) {
-      img.style.transform = `translateX( ${amount}px )`;
-    }
-  }
-}, 1000);
+});
+
+headerBtn.addEventListener("mousedown", () => {
+  headerBtn.classList.toggle("active");
+  headerNav.classList.toggle("active");
+});
 
 projectBtns[0].addEventListener("click", () => {
   for (const element of projectBooks) {

@@ -47,9 +47,13 @@
         object-fit: contain;
       }
 
+      &--title {
+        font-size: map-get($font-sizes, "l");
+      }
+
       &--text {
-        font-size: map-get($font-sizes, m);
-        width: 55%;
+        font-size: map-get($font-sizes, "base");
+        width: 70%;
       }
 
       &:nth-child(even) {
