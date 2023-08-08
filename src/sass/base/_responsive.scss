@@ -1,0 +1,118 @@
+@media (max-width: 1025px) {
+  html {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  .header__nav-list {
+    &--item a {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  html {
+    font-size: 50%; // 1rem = 8px
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 37.5%; // 1rem = 6px
+  }
+  .header__nav {
+    display: none;
+  }
+
+  .header {
+    justify-content: flex-end;
+    padding: 0;
+    padding-inline: 2rem;
+  }
+
+  .header--btn {
+    display: block;
+  }
+
+  .section-about {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section-events__wrapper-container {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+
+    &__content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center;
+      gap: 2rem;
+
+      p {
+        text-align: center !important;
+      }
+    }
+  }
+
+  .section-contact__wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-list {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  html {
+    font-size: 31.25%; // 1rem = 5px
+  }
+}
+
+@media (max-width: 321px) {
+  html {
+    font-size: 25%; // 1rem = 4px
+  }
+}
+
+@media (max-width: 550px) {
+  .section-contact__wrapper {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .section-hero--img {
+    width: 35%;
+    height: 50%;
+  }
+  .section-hero__content {
+    &--title {
+      font-size: 4rem;
+    }
+    &--text {
+      font-size: 1.4rem;
+      max-width: 22rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .section-projects-book {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-projects-documentary {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2.5rem;
+    .section-projects__content-item:nth-child(4) {
+      grid-column: 2;
+    }
+  }
+}

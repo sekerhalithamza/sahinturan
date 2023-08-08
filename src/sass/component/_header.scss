@@ -30,13 +30,4 @@
       font-size: map-get($font-sizes, m);
     }
   }
-
-  @media screen and (max-width: 1000px) {
-    &__nav-list {
-      gap: 3rem;
-      a {
-        font-size: 1.4rem;
-      }
-    }
-  }
 }

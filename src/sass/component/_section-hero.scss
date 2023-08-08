@@ -20,22 +20,6 @@
 
   &--img {
     height: 80%;
-    object-fit: contain;
-  }
-
-  @media screen and (max-width: 750px) {
-    .section-hero--img {
-      width: 35%;
-      height: 50%;
-    }
-    &__content {
-      &--title {
-        font-size: 4rem;
-      }
-      &--text {
-        font-size: 1.4rem;
-        max-width: 22rem;
-      }
-    }
+    object-fit: cover;
   }
 }
