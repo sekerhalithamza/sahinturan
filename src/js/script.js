@@ -6,6 +6,13 @@ const rightBtn = document.getElementsByClassName("section-gallery-btn")[1];
 const projectBtns = document.getElementsByClassName("section-projects__option");
 const projectBooks = document.getElementsByClassName("section-projects-book");
 const projectDocumentaries = document.getElementsByClassName("section-projects-documentary");
+const headerBtn = document.getElementById("headerBtn");
+const headerNav = document.getElementById("headerNav");
+
+headerBtn.addEventListener("mousedown", () => {
+  headerBtn.classList.toggle("active");
+  headerNav.classList.toggle("active")
+});
 
 setTimeout(function () {
   const rect = gallery.getBoundingClientRect();
@@ -28,7 +35,7 @@ setTimeout(function () {
   rightBtn.addEventListener("click", () => {
     if (index === galleryImages.length - (1 + stopAmount)) return;
     scrollAmount -= galleryImages[index].getBoundingClientRect().width;
-    const smth = gallery.getBoundingClientRect().width /2;
+    const smth = gallery.getBoundingClientRect().width / 2;
     moveImages(moveX + scrollAmount - 500);
     index++;
   });

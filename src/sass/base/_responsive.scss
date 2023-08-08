@@ -15,22 +15,100 @@
   }
 }
 
+// responsive i ayrı dosyaya atmayı sikim
+
 @media (max-width: 600px) {
   html {
     font-size: 37.5%; // 1rem = 6px
   }
   .header__nav {
     display: none;
+    transition: all 0.8s ease;
+    display: flex;
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding-inline-start: 1rem;
+    padding-block: 5rem 2rem;
+    left: 0;
+    &-list {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 14rem;
+      gap: 1rem;
+      &--item a {
+        color: black;
+      }
+    }
   }
 
   .header {
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 0;
     padding-inline: 2rem;
+    position: relative;
   }
 
   .header--btn {
-    display: block;
+    display: flex;
+    position: relative;
+    div:nth-child(1) {
+      border-radius: 0.3rem;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      background-color: #fff;
+      transition: all 1s ease;
+    }
+    div:nth-child(2) {
+      border-radius: 0.3rem;
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      top: 45%;
+      transition: all 1s ease;
+    }
+    div:nth-child(3) {
+      border-radius: 0.3rem;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      bottom: 0;
+      background-color: #fff;
+      transition: all 1s ease;
+    }
+  }
+  .header--btn.active {
+    z-index: 1;
+    filter: invert(1);
+    div:nth-child(2) {
+      opacity: 0;
+    }
+    div:nth-child(1) {
+      top: 0%;
+    }
+    div:nth-child(3) {
+      bottom: 50%;
+    }
+  }
+  .header__nav.active {
+    height: fit-content;
+    background-color: #fff;
+    color: black;
+    width: 40%;
+    padding-inline-start: 1rem;
+    padding-block: 5rem 2rem;
+    opacity: 1;
+    visibility: visible;
+    .header__nav-list {
+      &--item a {
+        color: black;
+      }
+    }
   }
 
   .section-about {
