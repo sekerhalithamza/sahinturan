@@ -27,11 +27,6 @@
   html {
     font-size: 50%; // 1rem = 8px
   }
-}
-
-// responsive i ayrı dosyaya atmayı sikim
-
-@media (max-width: 750px) {
   .section-hero--img {
     width: 35%;
     height: 50%;
@@ -181,9 +176,6 @@
   .section-events__wrapper {
     row-gap: 5rem;
   }
-}
-
-@media (max-width: 550px) {
   .section-contact__wrapper {
     gap: 3rem;
   }
@@ -191,7 +183,7 @@
 
 @media (max-width: 376px) {
   html {
-    font-size: 31.25%; // 1rem = 5px
+    font-size: 50%;
   }
   .section-events__wrapper-container--text {
     width: 100%;
@@ -223,7 +215,7 @@
 
 @media (max-width: 321px) {
   html {
-    font-size: 45%; // 1rem = 4px
+    font-size: 45%;
   }
   .section-about {
     padding-inline: 4rem;
