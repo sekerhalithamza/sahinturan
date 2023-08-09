@@ -40,7 +40,7 @@ addEventListener("DOMContentLoaded", function () {
     if (index === galleryImages.length - (1 + stopAmount)) return;
     const rect = galleryImageRects[index];
     scrollAmount += rect.width;
-    gallery.style.transform = `translateX( ${100}px )`;
+    gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
     index++;
   });
 });
