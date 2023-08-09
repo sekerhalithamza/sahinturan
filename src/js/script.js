@@ -12,42 +12,39 @@ const headerNav = document.getElementById("headerNav");
 addEventListener("DOMContentLoaded", function () {
   const rect = gallery.getBoundingClientRect();
   const galleryImages = gallery.getElementsByClassName("section-gallery__content-item");
-  const galleryImagesArray = [...galleryImages];
-  const galleryImageRects = galleryImagesArray.map((e) => {
-    return e.getBoundingClientRect();
-  });
-
-  let moveX = ((rect.width - window.innerWidth) / 2) * -1;
-  function calcScroll() {
-    return (-76 * 10) / 2;
-  }
+  const galleryImgHeight = 100;
 
   let scrollAmount = calcScroll();
-  console.log(scrollAmount);
   let index = (galleryImages.length - 1) / 2;
-
-  const stopAmount = 0;
-
+  function calcScroll() {
+    let val = 0;
+    for (const img of galleryImages) {
+      let ratio = img.getAttribute("data-aspect-ratio");
+      val -= ratio * galleryImgHeight;
+    }
+    console.log(val)
+    val /= 2;
+    return val;
+  }
+  gallery.style.transform = `translateX( ${scrollAmount}px )`;
   leftBtn.addEventListener("click", () => {
-    if (index === stopAmount) return;
-    const rect = galleryImageRects[index];
+    if (index === 0) return;
+    const rect = galleryImages[index].getBoundingClientRect();
     scrollAmount += rect.width;
-    gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
+    gallery.style.transform = `translateX( ${scrollAmount}px )`;
     index--;
   });
-
   rightBtn.addEventListener("click", () => {
-    if (index === galleryImages.length - (1 + stopAmount)) return;
-    const rect = galleryImageRects[index];
-    scrollAmount += rect.width;
-    gallery.style.transform = `translateX( ${moveX + scrollAmount}px )`;
+    if (index === galleryImages.length - 1) return;
+    const rect = galleryImages[index].getBoundingClientRect();
+    scrollAmount -= rect.width;
+    gallery.style.transform = `translateX( ${scrollAmount}px )`;
     index++;
   });
 });
 
 headerBtn.addEventListener("mousedown", () => {
   headerBtn.classList.toggle("active");
-  headerNav.classList.toggle("active");
 });
 
 projectBtns[0].addEventListener("click", () => {
