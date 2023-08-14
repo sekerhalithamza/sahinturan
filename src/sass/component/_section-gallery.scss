@@ -1,5 +1,6 @@
 :root {
-  --gallery-bottom-margin: 20rem;
+  --gallery-bottom-margin: 25rem;
+  --gallery-image-height: 16rem;
 }
 
 .section-gallery {
@@ -51,7 +52,7 @@
     width: fit-content;
     transition: all 0.3s ease;
     &-item {
-      height: 100px;
+      height: var(--gallery-image-height);
     }
   }
 }
