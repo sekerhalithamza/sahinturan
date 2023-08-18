@@ -14,9 +14,10 @@
   }
 
   &--text {
-    font-size: map-get($font-sizes, base);
+    font-size: map-get($font-sizes, m);
     line-height: 175%;
     font-weight: map-get($font-weights, tiny);
     text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
   }
 }
