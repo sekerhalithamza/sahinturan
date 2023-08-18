@@ -1,6 +1,6 @@
 import os
 
-
+"""
 arr = [
     1,
     2,
@@ -37,12 +37,12 @@ for f in os.walk("."):
         if file.endswith(".webp"):
             found = False
             for v in arr:
-                if file.startswith(str(v)):
+                if file.startswith(str(v)+"."):
                     found = True
             if not found:
                 print("removing file", file)
-                # os.remove(file)
-
+                os.remove(file)
+"""
 """
 from PIL import Image
 
