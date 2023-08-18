@@ -9,12 +9,14 @@
   padding-block: 5rem;
 
   &--title {
-    font-size: map-get($font-sizes, xxxl);
+    font-size: map-get($font-sizes, xxl);
     font-weight: map-get($font-weights, semi-bold);
   }
 
   &--text {
-    font-size: map-get($font-sizes, m);
+    font-size: map-get($font-sizes, base);
+    line-height: 175%;
     font-weight: map-get($font-weights, tiny);
+    text-align: justify;
   }
 }
