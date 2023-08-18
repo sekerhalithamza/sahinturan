@@ -9,6 +9,7 @@ const projectDocumentaries = document.getElementsByClassName("section-projects-d
 const headerBtn = document.getElementById("headerBtn");
 const headerNav = document.getElementById("headerNav");
 
+/*
 addEventListener("DOMContentLoaded", function () {
   const rect = gallery.getBoundingClientRect();
   const galleryImages = gallery.getElementsByClassName("section-gallery__content-item");
@@ -42,7 +43,7 @@ addEventListener("DOMContentLoaded", function () {
     index++;
   });
 });
-
+*/
 headerBtn.addEventListener("mousedown", () => {
   headerBtn.classList.toggle("active");
 });

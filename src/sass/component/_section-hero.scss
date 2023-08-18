@@ -21,5 +21,6 @@
   &--img {
     height: 80%;
     object-fit: cover;
+    filter: grayscale(1) contrast(1.1);
   }
 }

@@ -5,7 +5,6 @@
 
 .section-gallery {
   position: relative;
-  margin-bottom: var(--gallery-bottom-margin);
   &--title {
     text-align: center;
     margin-bottom: 2rem;
@@ -40,17 +39,40 @@
   }
   &__content {
     &-wrapper {
-      display: flex;
+      display: grid;
       width: fit-content;
-      width: 80%;
-      overflow: hidden;
-      left: 10%;
-      position: absolute;
+      width: 100%;
+      justify-content: center;
+      padding-inline: 10%;
     }
-    display: flex;
-    gap: 3rem;
     width: fit-content;
     transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &-list {
+      width: 100%;
+      padding: 0.5rem;
+      display: block;
+      div {
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+        border: 2px solid rgb(209, 209, 209);
+        margin-bottom: 1rem;
+        img {
+          height: 120%;
+          width: 100%;
+          transition: all 0.4s ease;
+          transform: scale(1.04);
+        }
+        &:hover {
+          img {
+            transform: scale(1.17);
+          }
+        }
+      }
+    }
     &-item {
       height: var(--gallery-image-height);
     }
