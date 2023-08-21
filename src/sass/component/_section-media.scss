@@ -1,0 +1,24 @@
+.section-media {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &--title {
+        font-size: map-get($font-sizes, "l" );
+        text-align: center;
+        margin-block: 4rem;
+    }
+    &__container {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        justify-self: center;
+        align-self: center;
+        img {
+            width: 100%;
+            &:nth-child(2) {
+                height: 100%;  // make height's the same
+            }
+        }
+    }
+}
