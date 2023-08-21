@@ -184,7 +184,7 @@
 @media screen and (max-width: 550px) {
   .section-media__container {
     grid-template-columns: 1fr;
-    width: 40%;
+    width: 35%;
     img {
       &:nth-child(2) {
         height: auto;
@@ -207,7 +207,7 @@
 
 @media (max-width: 376px) {
   .section-media__container { 
-    width: 60%;
+    width: 50%;
   }
   html {
     font-size: 50%;
