@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  padding: 10rem 4rem;
+  padding-block: 5rem;
+  background-color: #222;
 
   &--title {
     font-size: map-get($font-sizes, xxxl);
@@ -15,14 +16,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    padding-inline: 6rem;
+    place-items: center;
 
     &-container {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+      width: 80%;
 
       &__content {
         width: 50%;
@@ -30,43 +31,45 @@
 
       &:nth-child(even) {
         .section-events__wrapper-container__content {
-          align-items: center;
-          justify-content: center;
-          display: grid;
+          align-items: start;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
           justify-items: center;
+          gap: 2rem;
           p {
             &:nth-child(2) {
-              text-align: center;
+              text-align: left;
             }
           }
         }
       }
       &:nth-child(odd) {
         .section-events__wrapper-container__content {
-          width: 50%;
+          align-items: end;
+          justify-content: space-between;
           display: flex;
-          align-items: center;
-          justify-content: center;
           flex-direction: column;
+          justify-items: center;
+          gap: 2rem;
           p {
             &:nth-child(2) {
               width: fit-content;
-              text-align: center;
+              text-align: right;
             }
           }
         }
       }
 
       &--img {
-        height: 40rem;
-        width: 50%;
-        object-fit: cover;
+        aspect-ratio: 1/1;
+        height: 100%;
       }
 
       &--title {
         font-size: map-get($font-sizes, "l");
         max-width: 80%;
-        text-align: center;
+        text-align: right;
       }
 
       &--text {

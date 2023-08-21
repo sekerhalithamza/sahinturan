@@ -3,22 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 6rem;
-  gap: 2rem;
+  margin-bottom: 2rem;
 
   &--title {
     font-size: map-get($font-sizes, xxxl);
-  }
-
-  &__option {
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    border: none;
-    cursor: pointer;
-    font-size: map-get($font-sizes, base);
-    &-container {
-      margin-bottom: 3rem;
-    }
+    text-align: center;
+    padding-block-start: 5rem;
   }
 
   &-book {
@@ -36,9 +26,7 @@
   &__content {
     display: grid;
     // grid-template-rows: 3fr repeat(4, 1fr);
-    row-gap: 5rem;
     width: 100%;
-    padding-inline: 5rem;
     margin-bottom: 4rem;
 
     &-item {
@@ -56,9 +44,9 @@
 
       &-end {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
         width: 100%;
 
         &__container {
@@ -83,11 +71,15 @@
   &-book,
   &-documentary {
     display: grid;
-    column-gap: 5%;
+    column-gap: 2%;
+    padding-block: 10rem;
+    padding-inline: 5rem;
   }
 
   &-documentary {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 5rem;
+    background-color: #222;
     &.closed {
       display: none;
     }
