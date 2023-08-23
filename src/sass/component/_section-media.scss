@@ -6,6 +6,7 @@
   padding-block-end: 8rem;
   gap: 5rem;
   background-color: #222;
+  overflow-x: hidden;
 
   &--title {
     font-size: 4rem;
@@ -33,7 +34,6 @@
       img {
         width: 20vw;
         height: 30vh;
-        object-fit:contain;
       }
     }
   }
@@ -75,7 +75,7 @@
 
   &--img {
     width: 20vw;
-    height: 30rem;
+    height: 20vh;
     object-fit: fill;
   }
 }
